@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nuevos Atributos de Entrada html5</title>
+</head>
+<body>
+	<h1>Autocomplete</h1>
+	<form action="demo_form.asp" autocomplete="on">
+  		Nombre:<input type="text" name="nombre" autocomplete="on"><br>
+  		Apellido: <input type="text" name="apellido" autocomplete="off"><br>
+  		Pais: <input type="text" name="pais" autocomplete="on"><br>
+  		E-mail: <input type="email" name="email" autocomplete="on"><br>
+  	</form>
+  	<input type="submit">
+	<h1>Autofocus</h1>
+	<form action="demo_form.asp">
+  		Pais: <input type="text" name="fname"><br>
+ 		Ciudad: <input type="text" name="lname" autofocus><br>
+  	<input type="submit">
+  	</form>
+  	<h1>Form</h1>
+  	<form action="demo_form.asp" id="form1"></form>
+  		Nombre: <input type="text" name="fname"><br>
+  		<input type="Submit" value="Submit">
+	</form>
+	<h1>Formaction</h1>
+	<form action="demo_form.asp" method="get">
+		Nombre: <input type="text" name="fname"><br>
+		Apellido: <input type="text" name="lname"><br>
+		<button type="submit">Presentar</button><br>
+		<button type="submit" formaction="demo_admin.asp">Submit as admin</button>
+	</form>
+	<h1>Formenctype</h1>
+	<form action="demo_post_enctype.asp" method="post">
+		Nombre: <input type="text" name="nombre"><br>
+		Apellido: <input type="text" name="apellido"><br>
+		Direccion: <input type="text" name="addres">
+ 		<input type="submit" value="Submit">
+		<input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+	</form>
+	<h1>Formmethod</h1>
+	<form action="demo_form.asp" method="get">
+		Direccion: <input type="text" name="address"><br>
+		E-Mail: <input type="text" name="email"><br>
+		<input type="submit" value="Submit">
+		<input type="submit" formmethod="post" formaction="demo_post.asp" value="Submit using POST">
+	</form>
+	<h1>Formnovalidate</h1>
+	<form action="demo_form.asp">
+		E-mail: <input type="email" name="usermail"><br>
+		<input type="submit" value="Submit"><br>
+		<input type="submit" formnovalidate="formnovalidate" value="Submit without validation">
+	</form>
+	<h1>Formtarget</h1>
+	<form action="demo_form.asp">
+		Nombres: <input type="text" name="nombre"><br>
+		Apellidos: <input type="text" name="apellido"><br>
+		Pais: <input type="text" name="country">
+		<input type="submit" value="Submit as normal">
+		<input type="submit" formtarget="_blank" value="Submit to a new window">
+	</form>
+	<h1>Height - Width</h1>
+	<form action="demo_form.asp">
+		Equipo: <input type="text" name="fname"><br>
+		Ciudad: <input type="text" name="lname"><br>
+		<input type="image" src="img/once.png" alt="Submit" width="48" height="48">
+	</form>
+	<h1>List</h1>
+		<input list="browsers">
+
+			<datalist id="browsers">
+  				<option value="Caldas">
+  				<option value="Antioquia">
+  				<option value="Valle">
+  				<option value="Cundinamarca">
+  				<option value="Atlantico">
+			</datalist>
+	<h1>Min - Max</h1>
+	<form action="demo_form.asp">
+
+  		Enter a date before 1980-01-01:
+  		<input type="date" name="bday" max="1979-12-31">
+
+  		Enter a date after 2000-01-01:
+  		<input type="date" name="bday" min="2000-01-02">
+
+  		Quantity (between 1 and 5):
+  		<input type="number" name="quantity" min="1" max="5">
+
+  		<input type="submit">
+
+	</form>
+	<h1>Multiple</h1>
+	<form action="demo_form.asp">
+  		Seleccionar Imagen: <input type="file" name="img" multiple>
+  		<input type="submit">
+	</form>
+	<h1>Placeholder</h1>
+	<form action="demo_form.asp">
+  		<input type="text" name="fname" placeholder="Equipo"><br>
+  		<input type="text" name="lname" placeholder="Numero de Jugadores"><br>
+  		<input type="submit" value="Submit">
+	</form>
+	<h1>Required</h1>
+	<form action="demo_form.asp">
+		Número de identificación: <input type="text" name="usrname" required>
+	<input type="submit">
+	</form>
+	<h1>Step</h1>
+	<form action="demo_form.asp">
+		<input type="number" name="points" step="3" min="5" max="40">
+		<input type="submit">
+	</form>
+</body>
+</html>

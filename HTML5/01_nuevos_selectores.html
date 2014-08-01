@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nuevos Selectores CSS</title>
+	<style>
+		/* 01--------------- */
+		p~ul {
+			border: 2px solid silver;
+		}
+		/* 02--------------- */
+		a[href^="https"] {
+			border: 2px solid silver;
+		}
+		/* 03--------------- */
+		a[href$=".pdf"] {
+			border: 2px solid silver;
+		}
+		/* 04--------------- */
+		a[href*="google"] {
+			background-color: silver;
+		}
+		/* 05--------------- */
+		li.ej5:first-of-type {
+			background-color: silver;
+		}
+		/* 06--------------- */
+		li.ej6:last-of-type {
+			background-color: silver;
+		}
+		/* 07--------------- */
+		p.ej7:only-of-type {
+			background-color: silver;
+		}
+		/* 08--------------- */
+		p.ej8:only-child {
+			background-color: silver;
+		}
+		/* 09--------------- */
+		p.ej9:nth-child(2) {
+			background-color: silver;
+		}
+		/* 10--------------- */
+		p.ej10:nth-last-child(2) {
+			background-color: silver;
+		}
+		/* 11--------------- */
+		p.ej11:nth-of-type(2) {
+			background-color: silver;
+		}
+		/* 12--------------- */
+		p.ej12:nth-last-of-type(2) {
+			background-color: silver;
+		}
+		/* 13--------------- */
+		p.ej13:first-child {
+			background-color: silver;
+		}
+		/* 14--------------- */
+		p.ej14:last-child {
+			background-color: silver;
+		}
+		/* 15--------------- */
+		:root {
+			background-color: #58594D
+		}
+		/* 16--------------- */
+		p.ej16:empty {
+			border: 6px solid silver;
+		}
+		/* 17--------------- */
+		#noticias:target {
+			border: 2px solid red;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Nuevos Selectores CSS</h1>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>p~ul</h2></legend>
+		<p>
+			<ul>
+				<li>Colombia</li>
+				<li>Argentina</li>
+				<li>Brasil</li>
+				<li>Urugua</li>
+				<li>Ecuador</li>
+				<li>Uruguay</li>
+			</ul>	
+		</p>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>a[href^="https"]</h2></legend>
+		<p>
+			<nav>
+				<li><a href="http://www.facebook.com">Facebook</a></li>
+				<li><a href="http://www.twitter.com">Twitter</a></li>
+				<li><a href="https://www.senasofiaplus.edu.co">Sofia Plus</a></li>
+			</nav>
+		</p>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>a[href$=".pdf"]</h2></legend>
+		<p>
+			<nav>
+				<li><a href="libros/css3.docx">Libro CSS 3</a></li>
+				<li><a href="libros/html5.x1sk">Libro HTML 5</a></li>
+				<li><a href="libros/js.pdf">Libro JS</a></li>
+			</nav>
+		</p>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>a[href*="google"]</h2></legend>
+		<p>
+			<nav>
+				<li><a href="http://maps.google.com">Mapas de Google</a></li>
+				<li><a href="http://mail.google.com">Correo de Google</a></li>
+				<li><a href="http://yahoo.com">Correo de Yahoo</a></li>
+			</nav>
+		</p>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>li.ej5:first-of-type</h2></legend>
+		<p>
+			<li class="ej5">Disco Duro</li>
+			<li class="ej5">Memoria RAM</li>
+			<li class="ej5">Tarjeta Madre</li>
+			<li class="ej5">Unidad de DVD</li>
+		</p>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>li.ej6:last-of-type</h2></legend>
+		<p>
+			<li class="ej6">Disco Duro</li>
+			<li class="ej6">Memoria RAM</li>
+			<li class="ej6">Tarjeta Madre</li>
+			<li class="ej6">Unidad de DVD</li>
+		</p>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>p.ej7:only-of-type</h2></legend>
+			<p class="ej7">Lorem Impsum Dolor 4</p>
+			<!-- <p class="ej7">Lorem Ipsum Dolor 4</p> -->
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>p:only-child</h2></legend>
+		<section>
+			<p class="ej8">Lorem Impsum Dolor 4</p>
+		</section>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>p.ej9:nth-child(2)</h2></legend>
+		<section>
+			<p class="ej9">Lorem Impsum Dolor 4</p>
+			<p class="ej9">Lorem Impsum Dolor 4</p>
+			<p class="ej9">Lorem Impsum Dolor 4</p>
+		</section>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>p.ej10:nth-last-child(2)</h2></legend>
+		<section>
+			<p class="ej10">Lorem Impsum Dolor 4</p>
+			<p class="ej10">Lorem Impsum Dolor 4</p>
+			<p class="ej10">Lorem Impsum Dolor 4</p>
+			<p class="ej10">Lorem Impsum Dolor 4</p>
+		</section>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>p.ej11:nth-of-type(2)</h2></legend>
+		<section>
+			<p class="ej11">Lorem Impsum Dolor 4</p>
+			<p class="ej11">Lorem Impsum Dolor 4</p>
+			<p class="ej11">Lorem Impsum Dolor 4</p>
+			<p class="ej11">Lorem Impsum Dolor 4</p>
+		</section>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>p.ej12:nth-last-of-type(2)</h2></legend>
+		<section>
+			<p class="ej12">Lorem Impsum Dolor 4</p>
+			<p class="ej12">Lorem Impsum Dolor 4</p>
+			<p class="ej12">Lorem Impsum Dolor 4</p>
+			<p class="ej12">Lorem Impsum Dolor 4</p>
+		</section>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>p.ej13:first-child</h2></legend>
+		<section>
+			<p class="ej13">Lorem Impsum Dolor 4</p>
+			<p class="ej13">Lorem Impsum Dolor 4</p>
+			<p class="ej13">Lorem Impsum Dolor 4</p>
+			<p class="ej13">Lorem Impsum Dolor 4</p>
+		</section>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>p.ej14:last-child</h2></legend>
+		<section>
+			<p class="ej14">Lorem Impsum Dolor 4</p>
+			<p class="ej14">Lorem Impsum Dolor 4</p>
+			<p class="ej14">Lorem Impsum Dolor 4</p>
+			<p class="ej14">Lorem Impsum Dolor 4</p>
+		</section>
+	</fieldset>
+	<!--||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend><h2>p.ej16:empty</h2></legend>
+		<section>
+			<p class="ej16">
+				<h2>HOLA</h2>
+			</p>
+			<p class="ej16"></p>
+			<p class="ej16">
+				<h2>HOLA</h2>
+			</p>
+		</section>
+</body>
+</html>

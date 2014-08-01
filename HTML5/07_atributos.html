@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Atributos Especificos (forumlario) html5</title>
+</head>
+<body>
+	<h1>Atributos Especificos (forumlario) html5</h1>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>Autocomplete</legend>
+		<form action="" method="post">
+			<label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" autocomplete="off">
+			<label for="nombre">Telefono:</label>
+			<input type="text" id="telefono" autocomplete="on">
+			<input type="submit" value="Enviar Datos">
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>Autofocus</legend>
+		<form action="" method="post">
+			<label for="correo">Correo Electrónico:</label>
+			<input type="text" id="correo" autofocus>
+			<input type="submit" value="Enviar datos">
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>Form</legend>
+		<form action="" method="get" id="frm">
+			<label for="correo">Correo Electrónico:</label>
+			<input type="text" id="correo" name="correo">
+			<input type="submit" value="Enviar datos">
+		</form>
+		<label for="correo">Dirección</label>
+		<input type="text" id="direccion" name="direccion" form="frm">
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>FormAction</legend>
+		<form action="datos.php" method="post">
+			<label for="edad">Edad:</label>
+			<input type="number" id="edad" >
+			<input type="submit" value="Enviar datos">
+			<input type="submit" value="Enviar datos a otro archivo" formaction="procesar.php">
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>FormEnctype</legend>
+		<form action="" method="post">
+			<label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" name="nombre">
+			<label for="nombre">Foto:</label>
+			<input type="file" id="foto" name="Foto">
+			<input type="submit" value="Enviar Datos">
+			<input type="submit" value="Enviar Datos y Archivos">
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>FormMethod</legend>
+		<form action="" method="post">
+			<label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" name="nombre">
+			<input type="submit" value="Enviar por Post">
+			<input type="submit" value="Enviar por Get" formmethod="get">
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>FormNovalidate</legend>
+		<form action="" method="post">
+			<label for="correo">Correo Electrónico:</label>
+			<input type="email" id="correo" name="correo" formnovalidate>
+			<label for="fecha">Fecha Nacimiento:</label>
+			<input type="date" id="fecha" name="fecha"  formnovalidate>
+			<input type="submit" value="Enviar datos">
+		</form>
+	</fieldset>
+<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>FormTarget</legend>
+		<form action="" method="post">
+			<label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" name="nombre">
+			<input type="submit" value="Enviar datos" formtarget="_blank" >
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>Alto y ancho</legend>
+		<form action="datos.php" method="post">
+			<label for="nombre">Nombre Completo:</label>
+			<input type="text" id="nombre" name="nombre">
+			<input type="image" src="imgs/boton.png" width="50px" height="50px;">
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>Lista</legend>
+		<form action="" method="post">
+			<input list="departamentos">
+			<datalist id="departamentos">
+				<option value="Caldas">Caldas</option>
+				<option value="Risaralda">Risaralda</option>
+				<option value="Quindio">Quindio</option>
+			</datalist>
+			<input type="submit" value="Enviar Datos">
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>Minimo y Maximo</legend>
+		<form action="" method="post">
+			<label for="edad">Edad:</label>
+			<input type="number" id="edad" name="edad" min="18" max="80">
+			<input type="submit" value="Enviar Datos">
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>Multiple</legend>
+		<form action="" method="post">
+			<label for="canciones">Canciones:</label>
+			<input type="file" id="canciones" name="canciones" multiple>
+			<input type="submit" value="Enviar Datos">
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>Placeholder</legend>
+		<form action="" method="post">
+			<input type="text" id="nombre" placeholder="Ingrese su Nombre">
+			<br>
+			<input type="text" id="apellidp" placeholder="Ingrese su Apellido">
+			<br>
+			<input type="submit" value="Enviar Datos">
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>Requerido</legend>
+		<form action="" method="post">
+			<input type="text" id="nombre" placeholder="Ingrese su Nombre" required>
+			<br>
+			<input type="text" id="apellidp" placeholder="Ingrese su Apellido" required>
+			<br>
+			<input type="submit" value="Enviar Datos">
+		</form>
+	</fieldset>
+	<!--|||||||||||||||||||||||||||||-->
+	<fieldset>
+		<legend>Step</legend>
+		<form action="" method="post">
+			<label for="edad">Edad:</label>
+			<input type="range" id="edad" step="10" oninput="salida.value=this.value">
+			<output id="salida" for="edad"></output>
+			<input type="submit" value="Enviar Datos">
+		</form>
+	</fieldset>
+</body>
+</html>

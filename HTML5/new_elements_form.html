@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nuevos Elementos - Formularios html5</title>
+</head>
+<body>
+	<h1>Datalist</h1>
+	<input list="browsers">
+ 		<datalist id="browsers">
+        <option value="Argentina"></option>
+        <option value="Alemania"></option>
+        <option value="Argelia"></option>
+  			<option value="Brazil"></option>
+  			<option value="Belgica"></option>
+        <option value="Colombia"></option>
+        <option value="Camerún"></option>
+        <option value="Costa De Marfil"></option>
+		</datalist>
+	<h1>Keygen</h1>
+	<form action="demo_keygen.asp" method="get">
+  		Usuario: <input type="text" name="usr_name">
+  		Encryption: <keygen name="security">
+  		<input type="submit">
+  	</form>
+  	<h1>Output</h1>
+  	<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+  		<input type="range" id="a" value="50">100
+  		+<input type="number" id="b" value="0">
+  		=<output name="x" for="a b"></output>
+	</form>
+</form>
+</body>
+</html>
